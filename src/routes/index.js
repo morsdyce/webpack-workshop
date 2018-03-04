@@ -6,3 +6,5 @@ export function Index() {
     ${renderNavigation()}
   `;
 }
+
+export default Index;

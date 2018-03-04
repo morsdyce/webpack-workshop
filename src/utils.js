@@ -1,7 +1,7 @@
 export function render(selector, component) {
-  const componentToRender = typeof component === 'Promise' ?
-    component :
-    Promise.resolve(component);
+  const componentToRender = typeof component() === 'Promise' ?
+    component() :
+    Promise.resolve(component());
 
   componentToRender.then((componentToRender) => {
     const html = componentToRender();

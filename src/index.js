@@ -1,11 +1,10 @@
+import './assets/styles.css';
 import { renderRoute } from './utils';
 import { Index } from './routes';
-import About from './routes/about';
-import Contact from './routes/contact';
 
 renderRoute('#root', [
-  { path: '/about', component: About },
-  { path: '/contact', component: Contact },
-  { path: '/', component: Index }
+  { path: '/about', component: () => import(/* webpackChunkName: "about" */ './routes/about').then(module => module.default) },
+  { path: '/contact', component: () => import(/* webpackChunkName: 'contact' */ './routes/contact').then(module => module.default) },
+  { path: '/', component: () => Index }
 ]);
 
