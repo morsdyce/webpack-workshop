@@ -1,0 +1,32 @@
+body {
+  background-color: aliceblue;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #000;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 0;
+  background: #e7b91b;
+  padding: 35px 25px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  background: #ecb700;
+  border-top: 8px solid #fff;
+  padding: 16px;
+  font-size: 20px;
+}
+
+a {
+  color: #000;
+}
