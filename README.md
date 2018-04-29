@@ -8,6 +8,3 @@ cd webpack-workshop
 npm install
 npm run validate
 ```
-
-## To run the project
-`npm start`
