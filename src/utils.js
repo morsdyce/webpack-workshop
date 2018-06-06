@@ -1,7 +1,7 @@
-export function render(selector, component) {
-  const componentToRender = typeof component() === 'Promise' ?
-    component() :
-    Promise.resolve(component());
+export function render(selector, component, getComponent) {
+  const componentToRender = getComponent ?
+    getComponent() :
+    Promise.resolve(component);
 
   componentToRender.then((componentToRender) => {
     const html = componentToRender();
@@ -29,7 +29,7 @@ export function renderRoute(selector, routeConfig) {
     routes = routeConfig.filter((route) => route.path === '/');
   }
 
-  render(selector, routes[0].component);
+  render(selector, routes[0].component, routes[0].getComponent);
 }
 
 export function renderNavigation() {
